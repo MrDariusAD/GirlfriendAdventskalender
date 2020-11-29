@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Girlfriend Adventskalender</string>
+    <string name="title_activity_main">Girlfriend Adventskalender</string>
+    <string name="package_name">de.mrdariusad.gfak</string>
+    <string name="custom_url_scheme">de.mrdariusad.gfak</string>
+</resources>

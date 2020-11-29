@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>63478dec-7723-447b-b680-9014707ec3c9</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\GirlfriendAdventskalender.Domain.Contracts\GirlfriendAdventskalender.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\..\GirlfriendAdventskalender.Domain\GirlfriendAdventskalender.Domain.csproj" />
+    <ProjectReference Include="..\..\GirlfriendAdventskalender.Infrastructure.MongoDb\GirlfriendAdventskalender.Infrastructure.MongoDb.csproj" />
+  </ItemGroup>
+
+</Project>

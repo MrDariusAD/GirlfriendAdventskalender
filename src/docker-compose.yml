@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  girlfriend-adventskalender-ui:
+    image: mrdariusad/girlfriend-adventskalender-ui:dev
+    restart: always
+    container_name: girlfriend-adventskalender-ui
+    environment:
+      - GFAK_ApiUrl=http://localhost:8456
+    ports:
+      - 8123:80
+    networks:
+      - default
+
+  girlfriend-adventskalender-api:
+    image: mrdariusad/girlfriendadventskalenderpresentationwebapi
+    restart: always
+    container_name: girlfriend-adventskalender-api
+    environment:
+      - GFAK_ConnectionString=mongodb://gfak:gfak_mongo0401!@girlfriend-adventskalender-db:27017
+      - GFAK_DatabaseName=LaraAdventskalender
+    ports:
+      - 8456:80
+    networks:
+      - default
+
+  girlfriend-adventskalender-db:
+    image: mongo
+    restart: always
+    container_name: girlfriend-adventskalender-db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=gfak
+      - MONGO_INITDB_ROOT_PASSWORD=gfak_mongo0401!
+    networks:
+      - default

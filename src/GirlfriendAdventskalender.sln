@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30626.31
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GirlfriendAdventskalender.Presentation.WebApi", "Presentation\GirlfriendAdventskalender.Presentation.WebApi\GirlfriendAdventskalender.Presentation.WebApi.csproj", "{56DE2B87-CCF8-4B8F-B694-BD0D340A61F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{473E560D-61EC-4240-8EFB-5F1170E0BA08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{6DB34720-DE01-4FAD-8A55-849074F24A59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0657363A-AE06-415C-BA17-2CA818D7B09B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GirlfriendAdventskalender.Domain", "GirlfriendAdventskalender.Domain\GirlfriendAdventskalender.Domain.csproj", "{71351CB0-79B2-4305-B439-8BEF02C152DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GirlfriendAdventskalender.Domain.Contracts", "Domain\GirlfriendAdventskalender.Domain.Contracts\GirlfriendAdventskalender.Domain.Contracts.csproj", "{8CE1A47C-9CBB-4E15-A60D-A236385623DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GirlfriendAdventskalender.Infrastructure.MongoDb", "GirlfriendAdventskalender.Infrastructure.MongoDb\GirlfriendAdventskalender.Infrastructure.MongoDb.csproj", "{4D04140C-FA34-4170-9A52-3C87FD25D727}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56DE2B87-CCF8-4B8F-B694-BD0D340A61F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56DE2B87-CCF8-4B8F-B694-BD0D340A61F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56DE2B87-CCF8-4B8F-B694-BD0D340A61F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56DE2B87-CCF8-4B8F-B694-BD0D340A61F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71351CB0-79B2-4305-B439-8BEF02C152DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71351CB0-79B2-4305-B439-8BEF02C152DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71351CB0-79B2-4305-B439-8BEF02C152DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71351CB0-79B2-4305-B439-8BEF02C152DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CE1A47C-9CBB-4E15-A60D-A236385623DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CE1A47C-9CBB-4E15-A60D-A236385623DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CE1A47C-9CBB-4E15-A60D-A236385623DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CE1A47C-9CBB-4E15-A60D-A236385623DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D04140C-FA34-4170-9A52-3C87FD25D727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D04140C-FA34-4170-9A52-3C87FD25D727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D04140C-FA34-4170-9A52-3C87FD25D727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D04140C-FA34-4170-9A52-3C87FD25D727}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56DE2B87-CCF8-4B8F-B694-BD0D340A61F5} = {473E560D-61EC-4240-8EFB-5F1170E0BA08}
+		{71351CB0-79B2-4305-B439-8BEF02C152DA} = {6DB34720-DE01-4FAD-8A55-849074F24A59}
+		{8CE1A47C-9CBB-4E15-A60D-A236385623DB} = {6DB34720-DE01-4FAD-8A55-849074F24A59}
+		{4D04140C-FA34-4170-9A52-3C87FD25D727} = {0657363A-AE06-415C-BA17-2CA818D7B09B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C475F63D-EA16-4F68-8897-5CBCE6D7FC88}
+	EndGlobalSection
+EndGlobal

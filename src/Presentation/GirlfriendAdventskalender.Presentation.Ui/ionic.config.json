@@ -1,0 +1,7 @@
+{
+  "name": "GirlfriendAdventskalender",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

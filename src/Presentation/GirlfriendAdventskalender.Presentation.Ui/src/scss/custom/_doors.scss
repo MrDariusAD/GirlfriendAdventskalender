@@ -1,0 +1,30 @@
+.door-content-background {
+  --background: url("/assets/images/doorBackground-min.jpg") no-repeat center center /
+    cover;
+}
+
+.door-header {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.door-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+}
+
+.door-text {
+  font-size: 0.7rem;
+  margin: 1rem 1.5rem;
+}
+
+.door-spinner {
+  display: block;
+  margin: auto;
+  width: 30%;
+  height: 30%;
+}

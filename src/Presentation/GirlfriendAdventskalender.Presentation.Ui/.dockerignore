@@ -1,0 +1,6 @@
+.dockerignore
+node_modules
+android
+e2e
+electron
+www

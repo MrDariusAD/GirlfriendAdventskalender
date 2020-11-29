@@ -1,0 +1,127 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+.snow {
+  $total: 160;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+
+  @for $i from 0 through $total {
+    $random-x: random(1000000) * 0.0001vw;
+    $random-offset: random_range(-100000, 100000) * 0.0001vw;
+    $random-x-end: $random-x + $random-offset;
+    $random-x-end-yoyo: $random-x + ($random-offset / 2);
+    $random-yoyo-time: random_range(30000, 80000) / 100000;
+    $random-yoyo-y: $random-yoyo-time * 99vh;
+    $random-scale: random(10000) * 0.0001;
+    $fall-duration: random_range(10, 30) * 1s;
+    $fall-delay: random(30) * -1s;
+
+    &:nth-child(#{$i}) {
+      opacity: random(10000) * 0.0001;
+      transform: translate($random-x, -10px) scale($random-scale);
+      animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+    }
+
+    @keyframes fall-#{$i} {
+      #{percentage($random-yoyo-time)} {
+        transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+      }
+
+      to {
+        transform: translate($random-x-end-yoyo, 99vh) scale($random-scale);
+      }
+    }
+  }
+}
+
+.calendar-row {
+  ion-col:hover {
+    border: 2px solid transparent;
+    background-color: transparentize(grey,0.4);
+  }
+  ion-col {
+    padding: 1rem 0;
+    margin: 0.5rem 0.25rem;
+    transform-style: preserve-3d;
+    transition: all 500ms;
+    border: 2px dashed transparent;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+    background-color: transparentize(grey,0.6);
+  }
+}
+
+.calendar-container {
+  margin: 0 1rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.christmas-night-background {
+  --background: url("/assets/images/christmasBackground.jpg") no-repeat center
+    center / cover;
+}
+
+.calendar-spinner {
+  display: block;
+  margin: auto;
+  width: 30%;
+  height: 30%;
+}
+
+.sc-ion-modal-md {
+  border-radius: 20px;
+}
+
+.door-locked {
+  background-color: transparentize($christmas-red,0.6) !important;
+  border-color: transparent !important;
+  color: grey;
+}
+
+.door-locked:hover {
+  background-color: transparentize($christmas-red,0.4) !important;
+  cursor: not-allowed;
+}
