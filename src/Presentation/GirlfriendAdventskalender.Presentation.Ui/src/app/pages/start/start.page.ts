@@ -22,7 +22,8 @@ export class StartPage implements OnInit {
   constructor(
     public modalController: ModalController,
     public platform: Platform,
-    private doorContentService: DoorContentService
+    private doorContentService: DoorContentService,
+    private cdRef: ChangeDetectorRef
   ) {}
 
   public isLoading = true;
@@ -45,7 +46,9 @@ export class StartPage implements OnInit {
           this.unlockDates[doorContent.id] = doorContent.unlocksAt;
         });
         this.isLoading = false;
+        this.cdRef.detectChanges();
       });
+    this.refreshLockStates();
   }
 
   public counter(i: number): Array<number> {
@@ -66,5 +69,14 @@ export class StartPage implements OnInit {
       cssClass: "border-fucking-radius",
     });
     return await modal.present();
+  }
+
+  private refreshLockStates() {
+    console.log('Running update');
+    this.now = new Date();
+    this.cdRef.detectChanges();
+    setTimeout(() => {
+      this.refreshLockStates();
+    }, 1000);
   }
 }

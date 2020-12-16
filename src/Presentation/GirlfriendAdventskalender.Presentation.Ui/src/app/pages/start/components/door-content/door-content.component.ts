@@ -18,7 +18,6 @@ export class DoorContentComponent implements OnInit, OnDestroy {
   public creationImageUrl: string = "";
   public creationText: string = "";
   public creationUnlocksAt: string = new Date().toString();
-  
 
   private unsubscribe = new Subject();
 
@@ -46,7 +45,7 @@ export class DoorContentComponent implements OnInit, OnDestroy {
       });
   }
 
-  public save() {
+  public save(closeAfterSave: boolean) {
     this.isLoading = true;
     if (this.doorContent) {
       this.doorContentService
@@ -62,6 +61,9 @@ export class DoorContentComponent implements OnInit, OnDestroy {
           this.creationText = response?.text;
           this.isLoading = false;
           this.showToast("DoorContent saved!");
+          if (closeAfterSave) {
+            this.closeModal();
+          }
         });
     } else {
       this.doorContentService
@@ -78,6 +80,9 @@ export class DoorContentComponent implements OnInit, OnDestroy {
           this.creationText = response?.text;
           this.isLoading = false;
           this.showToast("DoorContent saved!");
+          if (closeAfterSave) {
+            this.closeModal();
+          }
         });
     }
   }

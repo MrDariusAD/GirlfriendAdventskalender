@@ -59,9 +59,14 @@
       </ion-fab-button>
     </ion-fab>
     <ion-fab vertical="top" horizontal="end" slot="fixed">
-      <ion-fab-button color="success" (click)="save()">
-        <ion-icon name="save-outline"></ion-icon>
-      </ion-fab-button>
+      <ion-fab-list side="bottom">
+        <ion-fab-button color="success" (click)="save(false)">
+          <ion-icon name="save-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="success" (click)="save(true)">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
     </ion-fab>
   </ng-template>
 </ion-content>

@@ -37,6 +37,7 @@ export class DoorContentService {
   }
 
   public createDoorContent(doorContent: DoorContent): Observable<DoorContent> {
+    this.resetCache(doorContent.id);
     return this.httpClient.put<DoorContent>(
       `${this.baseUrl}/api/DoorContent/${doorContent.id}`,
       doorContent
@@ -44,9 +45,19 @@ export class DoorContentService {
   }
 
   public editDoorContent(doorContent: DoorContent): Observable<DoorContent> {
+    this.resetCache(doorContent.id);
     return this.httpClient.post<DoorContent>(
       `${this.baseUrl}/api/DoorContent/${doorContent.id}`,
       doorContent
     );
+  }
+
+  public resetCache(doorNumber?: string): void {
+    if(doorNumber) {
+      this.cache[doorNumber] = undefined;
+    }
+    else {
+      this.cache = [];
+    }
   }
 }
