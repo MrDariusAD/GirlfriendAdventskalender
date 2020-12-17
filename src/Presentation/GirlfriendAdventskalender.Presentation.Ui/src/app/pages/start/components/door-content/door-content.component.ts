@@ -48,6 +48,17 @@ export class DoorContentComponent implements OnInit, OnDestroy {
   public save(closeAfterSave: boolean) {
     this.isLoading = true;
     if (this.doorContent) {
+      const hasChanges =
+        this.doorContent.imageUrl !== this.creationImageUrl ||
+        this.doorContent.text !== this.creationText ||
+        this.doorContent.unlocksAt.toUTCString() !==
+          new Date(this.creationUnlocksAt).toUTCString();
+      if (!hasChanges) {
+        if (closeAfterSave) {
+          this.closeModal();
+        }
+        return;
+      }
       this.doorContentService
         .editDoorContent({
           id: this.doorNumber,

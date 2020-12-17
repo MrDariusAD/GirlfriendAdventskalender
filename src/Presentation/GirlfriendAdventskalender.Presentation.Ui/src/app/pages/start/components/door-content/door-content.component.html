@@ -59,11 +59,14 @@
       </ion-fab-button>
     </ion-fab>
     <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button color="success">
+        <ion-icon name="save-outline"></ion-icon>
+      </ion-fab-button>
       <ion-fab-list side="bottom">
-        <ion-fab-button color="success" (click)="save(false)">
+        <ion-fab-button color="success" (click)="save(false)" data-desc="Save">
           <ion-icon name="save-outline"></ion-icon>
         </ion-fab-button>
-        <ion-fab-button color="success" (click)="save(true)">
+        <ion-fab-button color="success" (click)="save(true)" data-desc="Save & Close">
           <ion-icon name="close-circle-outline"></ion-icon>
         </ion-fab-button>
       </ion-fab-list>

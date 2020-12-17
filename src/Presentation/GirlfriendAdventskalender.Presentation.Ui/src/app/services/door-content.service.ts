@@ -37,27 +37,22 @@ export class DoorContentService {
   }
 
   public createDoorContent(doorContent: DoorContent): Observable<DoorContent> {
-    this.resetCache(doorContent.id);
     return this.httpClient.put<DoorContent>(
       `${this.baseUrl}/api/DoorContent/${doorContent.id}`,
       doorContent
-    );
+    ).pipe(tap(x=> {
+      console.log(`Setting ${doorContent.id} to`, doorContent);
+      this.cache[doorContent.id] = doorContent;
+    }));
   }
 
   public editDoorContent(doorContent: DoorContent): Observable<DoorContent> {
-    this.resetCache(doorContent.id);
     return this.httpClient.post<DoorContent>(
       `${this.baseUrl}/api/DoorContent/${doorContent.id}`,
       doorContent
-    );
-  }
-
-  public resetCache(doorNumber?: string): void {
-    if(doorNumber) {
-      this.cache[doorNumber] = undefined;
-    }
-    else {
-      this.cache = [];
-    }
+    ).pipe(tap(x=> {
+      console.log(`Setting ${doorContent.id} to`, doorContent);
+      this.cache[doorContent.id] = doorContent;
+    }));
   }
 }
