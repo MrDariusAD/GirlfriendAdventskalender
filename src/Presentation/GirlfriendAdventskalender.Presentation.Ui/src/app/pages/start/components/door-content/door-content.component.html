@@ -1,0 +1,75 @@
+<ion-content scrollbar class="door-content-background">
+  <ng-container *ngIf="!editMode; else editModeTemplate">
+    <ng-container *ngIf="isLoading; else doorLoaded">
+      <ion-spinner color="light" class="door-spinner"> </ion-spinner>
+    </ng-container>
+    <ng-template #doorLoaded>
+      <div class="door-header">
+        <span class="christmas-font font-christmas-red">
+          Türchen {{ doorNumber }}
+        </span>
+      </div>
+      <div class="door-image">
+        <img [src]="doorContent.imageUrl" />
+      </div>
+      <div class="door-text">
+        <strong>{{ doorContent.text }}</strong>
+      </div>
+    </ng-template>
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button color="danger" (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ng-container>
+  <ng-template #editModeTemplate>
+    <div class="door-header">
+      <span class="christmas-font font-christmas-red">
+        Türchen {{ doorNumber }}
+      </span>
+    </div>
+    <div class="door-text">
+      <ion-item>
+        <ion-label position="floating">Unlocks At</ion-label>
+        <ion-datetime
+          displayFormat="DD/MM/YYYY"
+          min="2020-12-01"
+          max="2020-12-31"
+          [(ngModel)]="creationUnlocksAt"
+        ></ion-datetime>
+      </ion-item>
+    </div>
+    <div class="door-image">
+      <ion-item>
+        <ion-label position="floating">Image Url</ion-label>
+        <ion-input [(ngModel)]="creationImageUrl"></ion-input>
+      </ion-item>
+      <img *ngIf="creationImageUrl !== ''" [src]="creationImageUrl" />
+    </div>
+    <div class="door-text">
+      <ion-item>
+        <ion-label position="floating">Text</ion-label>
+        <ion-textarea [(ngModel)]="creationText"></ion-textarea>
+      </ion-item>
+      <strong>{{ creationText }}</strong>
+    </div>
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button color="danger" (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button color="success">
+        <ion-icon name="save-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="bottom">
+        <ion-fab-button color="success" (click)="save(false)" data-desc="Save">
+          <ion-icon name="save-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="success" (click)="save(true)" data-desc="Save & Close">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+  </ng-template>
+</ion-content>

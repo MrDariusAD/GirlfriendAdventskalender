@@ -1,0 +1,23 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "GirlfriendAdventskalender",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "launchAutoHide": true,
+      "backgroundColor": "#f4a7bc",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "androidSpinnerStyle": "large",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#999999",
+      "showSpinner": true,
+      "splashFullScreen": true,
+      "splashImmersive": true
+    }
+  },
+  "cordova": {}
+}

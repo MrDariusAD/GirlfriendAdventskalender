@@ -1,0 +1,52 @@
+<ion-content class="christmas-night-background" [fullscreen]="true">
+  <div class="snow" *ngFor="let i of counter(snowflakeCount)"></div>
+  <ng-container *ngIf="isLoading; else calendarLoaded">
+    <ion-spinner color="light" class="calendar-spinner"> </ion-spinner>
+  </ng-container>
+  <ng-template #calendarLoaded>
+    <div class="christmas-font calendar-header font-white">
+      Girlfriend Adventskalender {{adminMode ? "(Admin Mode)" : ""}}
+    </div>
+    <div id="container" class="calendar-container">
+      <ion-grid>
+        <ion-row class="calendar-row">
+          <ion-col tappable (click)="openDoor('1')" [class.door-locked]="unlockDates['1'] > now">1</ion-col>
+          <ion-col tappable (click)="openDoor('2')" [class.door-locked]="unlockDates['2'] > now">2</ion-col>
+          <ion-col tappable (click)="openDoor('3')" [class.door-locked]="unlockDates['3'] > now">3</ion-col>
+          <ion-col tappable (click)="openDoor('4')" [class.door-locked]="unlockDates['4'] > now">4</ion-col>
+        </ion-row>
+        <ion-row class="calendar-row">
+          <ion-col tappable (click)="openDoor('5')" [class.door-locked]="unlockDates['5'] > now">5</ion-col>
+          <ion-col tappable (click)="openDoor('6')" [class.door-locked]="unlockDates['6'] > now">6</ion-col>
+          <ion-col tappable (click)="openDoor('7')" [class.door-locked]="unlockDates['7'] > now">7</ion-col>
+          <ion-col tappable (click)="openDoor('8')" [class.door-locked]="unlockDates['8'] > now">8</ion-col>
+        </ion-row>
+        <ion-row class="calendar-row">
+          <ion-col tappable (click)="openDoor('9')" [class.door-locked]="unlockDates['9'] > now">9</ion-col>
+          <ion-col tappable (click)="openDoor('10')" [class.door-locked]="unlockDates['10'] > now">10</ion-col>
+          <ion-col tappable (click)="openDoor('11')" [class.door-locked]="unlockDates['11'] > now">11</ion-col>
+          <ion-col tappable (click)="openDoor('12')" [class.door-locked]="unlockDates['12'] > now">12</ion-col>
+        </ion-row>
+        <ion-row class="calendar-row">
+          <ion-col tappable (click)="openDoor('13')" [class.door-locked]="unlockDates['13'] > now">13</ion-col>
+          <ion-col tappable (click)="openDoor('14')" [class.door-locked]="unlockDates['14'] > now">14</ion-col>
+          <ion-col tappable (click)="openDoor('15')" [class.door-locked]="unlockDates['15'] > now">15</ion-col>
+          <ion-col tappable (click)="openDoor('16')" [class.door-locked]="unlockDates['16'] > now">16</ion-col>
+        </ion-row>
+        <ion-row class="calendar-row">
+          <ion-col tappable (click)="openDoor('17')" [class.door-locked]="unlockDates['17'] > now">17</ion-col>
+          <ion-col tappable (click)="openDoor('18')" [class.door-locked]="unlockDates['18'] > now">18</ion-col>
+          <ion-col tappable (click)="openDoor('19')" [class.door-locked]="unlockDates['19'] > now">19</ion-col>
+          <ion-col tappable (click)="openDoor('20')" [class.door-locked]="unlockDates['20'] > now">20</ion-col>
+        </ion-row>
+        <ion-row class="calendar-row">
+          <ion-col tappable (click)="openDoor('21')" [class.door-locked]="unlockDates['21'] > now">21</ion-col>
+          <ion-col tappable (click)="openDoor('22')" [class.door-locked]="unlockDates['22'] > now">22</ion-col>
+          <ion-col tappable (click)="openDoor('23')" [class.door-locked]="unlockDates['23'] > now">23</ion-col>
+          <ion-col tappable (click)="openDoor('24')" [class.door-locked]="unlockDates['24'] > now">24</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+  </ng-template>
+</ion-content>
