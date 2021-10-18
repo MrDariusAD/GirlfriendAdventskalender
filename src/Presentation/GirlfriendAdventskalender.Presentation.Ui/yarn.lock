@@ -1184,15 +1184,15 @@
     mime-types "~2.1.27"
     ora "^4.0.4"
 
-"@capacitor/android@2.4.5":
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-2.4.5.tgz#7ceefd0857eb2f789225bfb88f7467bfa3409125"
-  integrity sha512-LwnOPc1/luS3RqCiKx9l5qQtxQfFu4YW2r4U8Ko1Lr91i9Ibix1ChWqnvsBlcrdeNdhmMrW2v53mn22oT4F6oA==
+"@capacitor/android@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-2.5.0.tgz#143d7b3b0131af221b4a1fca778fc207f3d235a6"
+  integrity sha512-W25F9GRuqNAN9D6Sd5Lj21ibGqzd8006Tf3mfai6MJj8DB3a1TMp+hueRwt+WhDJAS+T2pnljuR3FD/jd4u2Rw==
 
-"@capacitor/cli@2.4.5":
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/@capacitor/cli/-/cli-2.4.5.tgz#614cc3cd0773377db3bb8ac49eafb2e6a621361d"
-  integrity sha512-nv0IRd3xnif8kIvAFk+ssEkwqZ8n0DvLuB7s0CmtRvMf6Rns02TTYndtV/YkSVja4JbrKb9FrcMd2aLu9KJEIg==
+"@capacitor/cli@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/cli/-/cli-2.5.0.tgz#8a4fee7055757bdb56560952c4893eddf91a9afc"
+  integrity sha512-TVBDsnjJRSRVI1R6ON5b6C5ydkbXX0CAaN1QRzVMVmTrg8YwQn2FvHu/wk3+zJm02R1um1+oonj6RyZkpBOfOw==
   dependencies:
     chalk "^2.3.0"
     commander "^4.1.1"
@@ -1206,10 +1206,10 @@
     which "^1.3.0"
     xml2js "^0.4.19"
 
-"@capacitor/core@2.4.5":
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-2.4.5.tgz#4532e2068224edf8684d07ea088c62adb27ccb92"
-  integrity sha512-3GfDAN3s8ajglbn0X6wS+1mtmLwtaBNyvrje3qZ7mzRGVOMWLlOL+n2EeA9IlhMyp8KbQFwXr7gKUk6DjMAKUQ==
+"@capacitor/core@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-2.5.0.tgz#86b202ed950846427f710fafbdbbd844b1d0cc56"
+  integrity sha512-WUkUnqqLtlEYn6tly8t6VR0ABlSVbXdlD/gBbYxx0P+gEqMF9b46uYb2YqyH+8HBDANzTweEySpLfhiSUvYS7w==
   dependencies:
     tslib "^1.9.0"
 
